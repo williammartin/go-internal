@@ -3,15 +3,13 @@
 // license that can be found in the LICENSE file.
 
 //go:build windows
-// +build windows
 
 package filelock
 
 import (
+	"internal/syscall/windows"
 	"io/fs"
 	"syscall"
-
-	"github.com/rogpeppe/go-internal/internal/syscall/windows"
 )
 
 type lockType uint32
